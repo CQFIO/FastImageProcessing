@@ -19,7 +19,7 @@ def identity_initializer():
 def nm(x):
     w0=tf.Variable(1.0,name='w0')
     w1=tf.Variable(0.0,name='w1')
-    return w0*x+w1*slim.batch_norm(x)
+    return w0*x+w1*slim.batch_norm(x) # the parameter "is_training" in slim.batch_norm does not seem to help so I do not use it
 
 def build(input):
     net=slim.conv2d(input,24,[3,3],rate=1,activation_fn=lrelu,normalizer_fn=nm,weights_initializer=identity_initializer(),scope='g_conv1')
