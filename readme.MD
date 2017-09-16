@@ -24,6 +24,9 @@ Tested in Ubuntu + Intel i7 CPU + Nvidia Titan X (Pascal) with Cuda (>=8.0) and 
 1. The single network for all operators is "combined.py" in the folder "Single_Network". Run it and its result is in "Single_Network/result_combined/video".
 2. The parameterized network is "parameterized.py" in the folder "Parameterized_Network". Run it and its result is in "Parameterized/result_parameterized/video".
 
+## Data
+If you want to experiment on the data in our evaluation, please email to chenqifeng22@gmail.com.
+
 ## Citation
 If you use our code for research, please cite our paper:
 
