@@ -11,7 +11,7 @@ def identity_initializer():
     def _initializer(shape, dtype=tf.float32, partition_info=None):
         array = np.zeros(shape, dtype=float)
         cx, cy = shape[0]//2, shape[1]//2
-        for i in range(shape[2]):
+        for i in range(np.minimum(shape[2],shape[3])):
             array[cx, cy, i, i] = 1
         return tf.constant(array, dtype=dtype)
     return _initializer
